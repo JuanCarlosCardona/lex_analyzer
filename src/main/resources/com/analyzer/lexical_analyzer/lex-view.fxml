@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="489.0" prefWidth="678.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.analyzer.lexical_analyzer.LexController">
+   <right>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnAnalyze" mnemonicParsing="false" prefHeight="27.0" prefWidth="103.0" text="Analyze" />
+         </children>
+      </VBox>
+   </right>
+   <bottom>
+      <TableView fx:id="tokenTable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="columnLexeme" prefWidth="195.48498380184174" text="Lexem" />
+          <TableColumn fx:id="columnToken" prefWidth="280.26161193847656" text="Token" />
+            <TableColumn fx:id="columnPattern" prefWidth="201.46917724609375" text="Pattern" />
+        </columns>
+      </TableView>
+   </bottom>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextArea fx:id="txtCode" prefHeight="290.0" prefWidth="484.0" />
+         </children>
+      </AnchorPane>
+   </center>
+   <left>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <TreeView fx:id="filesView" prefHeight="307.0" prefWidth="101.0" />
+         </children>
+      </VBox>
+   </left>
+</BorderPane>
